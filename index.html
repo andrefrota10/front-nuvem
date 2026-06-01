@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Product CRUD</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Product CRUD</h1>
+
+    <div class="search-section">
+      <h2>Consultar Produto por ID</h2>
+      <div class="search-box">
+        <input type="number" id="search-id" placeholder="Digite o ID do produto">
+        <button type="button" onclick="searchProductById()">Buscar</button>
+        <button type="button" onclick="fetchProducts()" class="btn-clear">Limpar Filtro</button>
+      </div>
+      <div id="search-result"></div>
+    </div>
+
+    <form id="add-product-form">
+      <h2>Add Product</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description">
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" required step="0.01">
+      <button type="submit">Add</button>
+    </form>
+
+    <form id="update-product-form" style="display:none; margin-top: 20px;">
+      <h2>Update Product</h2>
+      <input type="hidden" id="update-id" name="id">
+      
+      <label for="update-name">Name:</label>
+      <input type="text" id="update-name" name="update-name" required>
+
+      <label for="update-description">Description:</label>
+      <input type="text" id="update-description" name="update-description">
+
+      <label for="update-price">Price:</label>
+      <input type="number" id="update-price" name="update-price" required step="0.01">
+      
+      <div class="button-group">
+        <button type="submit" class="btn-update">Update</button>
+        <button type="button" id="cancel-update">Cancel</button>
+      </div>
+    </form>
+
+    <h2>Products List</h2>
+    <ul id="products"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
