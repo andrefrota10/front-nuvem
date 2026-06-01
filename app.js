@@ -1,5 +1,5 @@
 // Substitua o IP abaixo pelo IP público da sua instância AWS
-const API_URL = 'http://SEU_IP_PUBLICO_DA_AWS:3000';
+const API_URL = 'http://3.18.105.248:3000';
 
 const productList = document.querySelector('#products');
 const addProductForm = document.querySelector('#add-product-form');
